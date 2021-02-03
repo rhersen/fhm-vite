@@ -78,7 +78,7 @@ function App() {
   const [region, setRegion] = useState("0");
 
   useEffect(() => {
-    fetch("http://linode.hersen.name:3000/cases").then(
+    fetch("https://secure.hersen.name/covid19-api/cases").then(
       (faunaResp) => {
         if (!faunaResp.ok) {
           return faunaResp.text().then((error) => {});
@@ -95,7 +95,7 @@ function App() {
       }
     );
 
-    fetch("http://linode.hersen.name:3000/deaths").then(
+    fetch("https://secure.hersen.name/covid19-api/deaths").then(
       (faunaResp) => {
         if (!faunaResp.ok) {
           return faunaResp.text().then((error) => {});
